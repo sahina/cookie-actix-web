@@ -1,0 +1,33 @@
+[package]
+authors = ["{{cookiecutter.email}}"]
+edition = "2018"
+name = "{{cookiecutter.repo_name}}"
+version = "{{cookiecutter.version}}"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "app"
+path = "src/main.rs"
+
+[dependencies]
+actix-rt = "1.1"
+actix-web = "3.1"
+anyhow = "1.0.33"
+async-trait = "0.1.41"
+chrono = {version = "0.4.19", features = ["serde"]}
+config = {version = "0.10.1", default-features = false, features = ["yaml"]}
+dotenv = "0.15.0"
+futures = "0.3.5"
+log = "0.4.11"
+pretty_env_logger = "0.4.0"
+rand = "0.7.3"
+regex = "1.4"
+reqwest = {version = "0.10.8", features = ["json"]}
+serde = {version = "1.0.116", features = ["derive"]}
+serde_json = "1.0.59"
+sqlx = {version = "0.4.0-beta.1", default-features = false, features = ["runtime-tokio", "macros", "postgres", "uuid", "chrono", "migrate"]}
+thiserror = "1.0.21"
+tokio = "0.2.22"
+uuid = {version = "0.8.1", features = ["serde", "v4"]}
