@@ -1,4 +1,4 @@
-# Cookie Cutter based rust project template
+# Cookiecutter rust project template
 
 ## Requirements
 
